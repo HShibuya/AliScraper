@@ -1,0 +1,53 @@
+#scraperContainer {
+    display: flex;
+    width: 320px;
+    justify-content: space-around;
+}
+.scraperDiv{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    align-items: center;
+}
+h2{
+    margin: 4px;
+}
+.button-1 {
+  background-color: #ed9e1b;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 4px 0px;
+  outline: none;
+  padding: 4px 6px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: stretch;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #e6b762;
+}
+
+#clear{
+    background-color: #ea4343;
+}
+#clear:hover,
+#clear:focus {
+  background-color: #e88383;
+}

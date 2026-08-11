@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <title>Simple Aliexpress Scraper</title>
+    <script src="popup.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <h1>AliScraper</h1>
+    </div>
+    <div id="scraperContainer">
+        <div id="aliExDiv" class="scraperDiv" >
+            <h2>AliExpress:</h2>
+            <button class="scrapeBtn button-1">Scrape Order Info</button>
+            <pre class="output"></pre>
+        </div> 
+        <div id="aliBabaDiv" class="scraperDiv">
+            <h2>AliBaba:</h2>
+            <button class="scrapeOrder button-1">Scrape Order Info</button>
+            <button class="scrapePayment button-1">Scrape Payment Info</button>
+            <pre class="output"></pre>
+        </div> 
+    </div>
+    <div id="outputContainer">
+        <div id="numberScrapedOrdersDiv" class="outputItems">
+            <span>Number of Scraped Orders: </span> <span id="orderNumber"></span>
+        </div>
+        <a id="download" class="outputItems button-1">Download CSV</a>
+        <button id="clear" class="outputItems button-1">Clear Saved Data</button>
+    </div>
+</body>
+</html>
