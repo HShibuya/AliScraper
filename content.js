@@ -55,13 +55,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     orderPriceData.shipping += Number(orderPrice.children[1].textContent.replace(/[^.\d]/g, ''))
                 }
             }
-            else if(orderPrice.children[0].textContent.trim() == "Coins"){
+            else if(orderPrice.children[0].textContent.trim() == "Coins" || orderPrice.children[0].textContent.trim() == "Coins credits"){
                 console.log("coins")
-                orderPriceData.coins = Number(orderPrice.children[1].textContent.replace(/[^.\d]/g, ''))*-1
+                orderPriceData.coins += Number(orderPrice.children[1].textContent.replace(/[^.\d]/g, ''))*-1
             }
             else if(orderPrice.children[0].textContent.trim() == "Spend & save" || orderPrice.children[0].textContent.trim() == "AliExpress Saver coupon"){
                 console.log("spend & save")
-                orderPriceData.spendSave = Number(orderPrice.children[1].textContent.replace(/[^.\d]/g, ''))*-1
+                orderPriceData.spendSave += Number(orderPrice.children[1].textContent.replace(/[^.\d]/g, ''))*-1
             }
             else if(orderPrice.children[0].textContent.trim() == "AliExpress Coupons"
             || orderPrice.children[0].textContent.trim() == "Promo codes" || orderPrice.children[0].textContent.trim() == "Store discounts" || orderPrice.children[0].textContent.trim() == "Store Coupon"){
@@ -74,7 +74,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             }
             else if(orderPrice.children[0].textContent.trim() == "Total"){
                 console.log("Total")
-                orderPriceData.total = Number(orderPrice.children[1].textContent.replace(/[^.\d]/g, ''))
+                orderPriceData.total += Number(orderPrice.children[1].textContent.replace(/[^.\d]/g, ''))
             }
             else{
                 sendResponse({message: "Error: unknown order data", error: true})
